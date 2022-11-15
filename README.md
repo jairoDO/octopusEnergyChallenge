@@ -43,7 +43,7 @@ for the reading values and dates associated with either:
   - login with the superuser before created
   - go to http://127.0.0.1:8000/admin/nem13/accumulationmeterdata/
 - Search for NMI, meter serial number
-  - [search by nmi or meter serial number](/img.png?raw=true "/img.png")
+- <img src="/img.png?raw=true" alt="Search by nmi or meter serial number" title="Search by nmi or meter serial number">
 
 Code
 ----

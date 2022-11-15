@@ -3,7 +3,18 @@ Octopus Energy technical challenge
 This document describes a solution for the technical challenge that forms part of the Octopus
 Energy (OE) recruitment process for back-end engineers.
 
-Requirements
+Index
+-----
+
+- [Requirements](#requiremets)
+- [Install](#install)
+- [Started](#started)
+- [Problems](#problems)
+- [Code](#code)
+- [Run Test](#test)
+- [Generate eport](#report)
+
+Requirements<a id="requiremets"></a>
 ----------
 - python >= 3.8
 - pip
@@ -11,7 +22,7 @@ Requirements
 - octopus_energy_technical.zip
 - allure (https://docs.qameta.io/allure/#_installing_a_commandline)
 
-Install
+Install<a id="install"></a>
 -------
 - extract octopus_energy_technical.zip
 - cd to the folder extracted
@@ -19,7 +30,7 @@ Install
 - pipenv shell
 - pip install -r requirements.txt
 
-Started
+Started<a id="started"></a>
 --------
 - cd flow
 - python manage.py makemigrations
@@ -27,7 +38,7 @@ Started
 - python manage.py createsuperuser (follow the steps)
 
 
-Problems
+Problems<a id="problems"></a>
 ----------
 - It should have a management command that can be called with the path to a
 NEM13 file (or files). The specification for these files is included below.
@@ -44,8 +55,9 @@ for the reading values and dates associated with either:
   - go to http://127.0.0.1:8000/admin/nem13/accumulationmeterdata/
 - Search for NMI, meter serial number
 - <img src="/img.png?raw=true" alt="Search by nmi or meter serial number" title="Search by nmi or meter serial number">
+![search by nmi or meter serial number](img.png)
 
-Code
+Code<a id="code"></a>
 ----
 
 The code is a project in django, with the app flow and nem13with a command process_nem13 also have  unittests, and functional tests using django-behave 
@@ -103,18 +115,17 @@ The code is a project in django, with the app flow and nem13with a command proce
   - 
 ```
 
-Run test
+Run test<a id="test"></a>
 --------
 - Run behave tests` python manage.py behave` 
     - (https://behave-django.readthedocs.io/en/stable/)
 - Run unittests ` python manage.py test nem13.management.commands.tests.test_validator`  
 
+Generate report <a name="report"></a> 
+----------------
 
-Run report
-----------
 - allure required, and run before python manage.py behave
 - allure serve reports/
-
 
 
 

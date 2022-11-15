@@ -17,8 +17,8 @@ Install
 - pipenv shell
 - pip install -r requirements.txt
 
-Start
------
+Started
+--------
 - cd flow
 - python manage.py makemigrations
 - python manage.py migrate

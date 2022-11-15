@@ -7,11 +7,13 @@ Requirements
 ----------
 - python >= 3.8
 - pip
-- octopus_energy_technical.gzip
+- pipenv
+- octopus_energy_technical.zip
+- allure (https://docs.qameta.io/allure/#_installing_a_commandline)
 
 Install
 -------
-- extract octopus_energy_technical.gzip
+- extract octopus_energy_technical.zip
 - cd to the folder extracted
 - pip install pipenv
 - pipenv shell
@@ -40,7 +42,8 @@ for the reading values and dates associated with either:
   - go to http://127.0.0.1:8000/admin/
   - login with the superuser before created
   - go to http://127.0.0.1:8000/admin/nem13/accumulationmeterdata/
-
+- Search for NMI, meter serial number
+  - [search by nmi or meter serial number](/img.png?raw=true "/img.png")
 
 Code
 ----
@@ -107,6 +110,10 @@ Run test
 - Run unittests ` python manage.py test nem13.management.commands.tests.test_validator`  
 
 
+Run report
+----------
+- allure required, and run before python manage.py behave
+- allure serve reports/
 
 
 
